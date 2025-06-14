@@ -1,8 +1,6 @@
 <?php
 
 class Book {
-
-// Add properties as Private
     private $title;
     private $availableCopies;
 
@@ -11,16 +9,13 @@ class Book {
     $this->availableCopies = $availableCopies;
      }
 
-//  Add getTitle method
 public function getTitle(){
     return $this->title;
 }
      
- // Add getAvailableCopies method
 public function getCopies(){
     return $this->availableCopies;
 }
- // Add borrowBook method
 public function borrowBook(){
     if($this->availableCopies > 0){
         $this->availableCopies = $this->availableCopies - 1;
@@ -32,7 +27,6 @@ public function borrowBook(){
  
 
 
- //Add returnBook method
 public function returnBook(){
     $this->availableCopies = $this->availableCopies + 1;
 }
@@ -50,19 +44,12 @@ class Member{
 
      }
 
-
- //Add getName method
 public function getName(){
     return $this->name;
 }
- // Add borrowBook methodx
     public function borrowBook(Book $book) {
         return $book->borrowBook();
     }
-
-
-
- //Add returnBook method
 
      public function returnBook(Book $book) {
         $book->returnBook();
